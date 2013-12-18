@@ -8,4 +8,3 @@ describe Customer do
     it { should_not have_valid(:name).when(*blank) }
   end
 end
-end
