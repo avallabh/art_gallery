@@ -14,7 +14,11 @@ describe Art do
     it { should have_valid(:type_id).when(1) }
     it { should_not have_valid(:type_id).when(*blank) }
 
-    it { should have_valid(:for_sale).when(*sale) }
+    # it 'validates a boolean' do
+    #   validates_inclusion_of :for_sale, :in => [true, false]
+    # end
+
+    # it { should have_valid(:for_sale).when(*sale) }
     it { should_not have_valid(:for_sale).when(*blank) }
 
     it { should have_valid(:collection_id).when(1) }
