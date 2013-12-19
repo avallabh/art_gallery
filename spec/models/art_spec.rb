@@ -11,8 +11,8 @@ describe Art do
     it { should have_valid(:artist_id).when(1) }
     it { should_not have_valid(:artist_id).when(*blank) }
 
-    it { should have_valid(:type_id).when(1) }
-    it { should_not have_valid(:type_id).when(*blank) }
+    it { should have_valid(:type_of_art_id).when(1) }
+    it { should_not have_valid(:type_of_art_id).when(*blank) }
 
     it { should_not have_valid(:for_sale).when(*blank) }
 
@@ -23,8 +23,7 @@ describe Art do
 
   describe 'associations' do
 
-    it { should belong_to(:artist)
-          inverse_of :art }
+    it { should belong_to(:artist) }
     it { should belong_to(:collection) }
     it { should belong_to(:type_of_art) }
 
