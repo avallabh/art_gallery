@@ -4,7 +4,10 @@ class Customer < ActiveRecord::Base
   has_many :arts,
     inverse_of: :customer
 
-  has_many :customer_collections
-  has_many :collections, through: :customer_collections
+  has_many :customer_collections,
+    inverse_of: :customer
+
+  has_many :collections, through: :customer_collections,
+    inverse_of: :collection
 
 end

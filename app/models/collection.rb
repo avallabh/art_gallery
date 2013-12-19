@@ -10,6 +10,4 @@ class Collection < ActiveRecord::Base
   has_many :customers, through: :customer_collections,
     inverse_of: :collection
 
-#  belongs_to :customer_collection,
-#    inverse_of: :collections
 end
