@@ -23,13 +23,10 @@ describe Art do
 
   describe 'associations' do
 
-    it { should belong_to(:artist) }
-    it { should belong_to(:collection) }
-    it { should belong_to(:type_of_art) }
+    it { should belong_to(:artist).dependent(:destroy) }
+    it { should belong_to(:collection).dependent(:destroy) }
+    it { should belong_to(:type_of_art).dependent(:destroy) }
 
-    # it { should have_one(:artist)}
-    # it { should have_one(:collection)}
-    # it { should have_one(:type_of_art)}
   end
 
 end

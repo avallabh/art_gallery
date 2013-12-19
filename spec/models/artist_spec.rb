@@ -10,4 +10,8 @@ describe Artist do
 
   end
 
+  describe 'associations' do
+    it { should have_many(:arts) }
+  end
+
 end
