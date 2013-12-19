@@ -10,5 +10,8 @@ describe Customer do
 
   describe 'associations' do
     it { should have_many(:arts) }
+    it { should have_many(:customer_collections) }
+    it { should have_many(:collections).through(:customer_collections) }
   end
+
 end

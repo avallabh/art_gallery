@@ -14,5 +14,8 @@ class Art < ActiveRecord::Base
   belongs_to :type_of_art,
     inverse_of: :arts,
     dependent: :destroy
+  belongs_to :customer,
+    inverse_of: :arts,
+    dependent: :destroy
 
 end

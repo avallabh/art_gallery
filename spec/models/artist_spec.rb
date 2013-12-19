@@ -7,7 +7,6 @@ describe Artist do
 
     it { should have_valid(:name).when('Frankenstein') }
     it { should_not have_valid(:name).when(*blank) }
-
   end
 
   describe 'associations' do
