@@ -9,8 +9,6 @@ describe TypeOfArt do
   end
 
   describe 'associations' do
-
-    it { should have_many(:art)}
-
+    it { should have_many(:art) }
   end
 end
