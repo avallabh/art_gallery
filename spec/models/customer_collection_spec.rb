@@ -3,11 +3,11 @@ require 'spec_helper'
 describe CustomerCollection do
 
   describe 'validations' do
-    it { should have_valid(:customer_id).when(1) }
-    it { should_not have_valid(:customer_id).when(nil, '') }
+    it { should have_valid(:customer).when(Customer.new) }
+    it { should_not have_valid(:customer).when(nil) }
 
-    it { should have_valid(:collection_id).when(1) }
-    it { should_not have_valid(:collection_id).when(nil, '') }
+    it { should have_valid(:collection).when(Collection.new) }
+    it { should_not have_valid(:collection).when(nil) }
   end
 
   describe 'associations' do
