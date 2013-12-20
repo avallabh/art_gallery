@@ -1,7 +1,7 @@
 class DropCustomerPurchase < ActiveRecord::Migration
 
   def change
-    remove_table :customer_purchases
+    drop_table :customer_purchases
   end
 
 end
