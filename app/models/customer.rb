@@ -10,4 +10,8 @@ class Customer < ActiveRecord::Base
   has_many :collections, through: :customer_collections,
     inverse_of: :collection
 
+  def total_spent
+    1000
+  end
+
 end
